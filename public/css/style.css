@@ -390,7 +390,7 @@ min-height: 45px;
     z-index: 1;
     height: auto;
     position: absolute;
-    top: 20%;
+    top: 70;
     left: 50%;
     transform: translate(-50%, -20%);
     text-align: left;

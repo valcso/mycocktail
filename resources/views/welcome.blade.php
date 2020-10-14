@@ -29,7 +29,9 @@
             }
         </style>
     </head>
-    <body class="antialiased">
+    <body>
+        <div class='wrapper'>
+            <div class='container-fluid ' id='cont'>
         <!--<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -44,6 +46,8 @@
                     @endif
                 </div>
         </div> -->
+      
+       
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" id='navBar'>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}" style='display:flex;'>
@@ -138,11 +142,13 @@
                 </div>
             </div>
             </div>
-            <div  class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12' id='footer'>
-                <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6' id='footerInner'>
-                    <a  style='color: #007bff;'href='https://github.com/valcso' target='_blank'><i class="fab fa-github-square"  style='font-size:25px;'></i></a>&nbsp;|&nbsp;&nbsp;&copy; <a id='copyRight'>All rights reserved</a>&nbsp;&nbsp;|&nbsp;<a style='color: #007bff;' href='https://www.thecocktaildb.com/' target="_blank">API</a>
-                </div>
-                </div>
-            
+        </div>
+          
+        </div>
+        <div  class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12' id='footer'>
+            <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6' id='footerInner'>
+                <a  style='color: #007bff;'href='https://github.com/valcso' target='_blank'><i class="fab fa-github-square"  style='font-size:25px;'></i></a>&nbsp;|&nbsp;&nbsp;&copy; <a id='copyRight'>All rights reserved</a>&nbsp;&nbsp;|&nbsp;<a style='color: #007bff;' href='https://www.thecocktaildb.com/' target="_blank">API</a>
+            </div>
+        </div>
     </body>
 </html>
