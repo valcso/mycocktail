@@ -103,8 +103,8 @@
 
             @endif
             <div class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12' id='welcomeCol'>
-            <div class='row' id='welcomeRow'>
-                <div class='col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12' id='welcomeDivLeft'>
+            <!--<div class='row' id='welcomeRow'>-->
+                <div class='col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12' id='welcomeDivLeft'>
               <h3 id='title'>Welcome on the cocktail app &#128526</h3>
               <h6 id='title'>
                 Endless browsing awaits you in the world of cocktails
@@ -132,7 +132,7 @@
                 </a>
               </div>
                 </div>
-                <div class='col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 shadow-md' id='welcomeDivRight'>
+                <div class='col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12 shadow-md' id='welcomeDivRight'>
                    <h3 id='title'>Join us in few steps and enjoy these features:</h3>
                    <h6 id='title'>&#128077 Browse cocktails by category, ingredient, glass type.</h6><br>
                    <h6 id='title'>&#128077 Search for cocktail by their ingredient.</h6><br>
@@ -140,7 +140,7 @@
                    <h6 id='title'>&#128077 Every cocktail is provided with image, ingredient, ingredient measure, ingredient image, and recipe!</h6><br>
                    <h6 id='title'>&#128077 Over 600 cocktails are avaliable.</h6><br>
                 </div>
-            </div>
+           <!-- </div> -->
             </div>
         </div>
       
