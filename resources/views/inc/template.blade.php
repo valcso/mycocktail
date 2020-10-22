@@ -34,7 +34,7 @@
                 </div>
         </div> -->
       
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" id='navBar'>
+        <nav class="navbar navbar-expand-xl navbar-light bg-white shadow-sm" id='navBar'>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}" style='display:flex;'>
                    <img src='images/logo.gif' width="5%"> <h6 id='navBrand'>Cocktail app</h6> 
@@ -130,16 +130,21 @@
                       </div>
                     </div>
                 </div>
+                <div class='row' id='comments'>
+                    @yield('comments')
+                </div>
             </div>   
             
         </div>
     
+       
         </div>
         <div  class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12' id='footer'>
             <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6' id='footerInner'>
                 <a href='https://github.com/valcso' target='_blank'><i class="fab fa-github-square"  style='font-size:25px;'></i></a>&nbsp;|&nbsp;&nbsp;&copy; <a id='copyRight'>All rights reserved</a>&nbsp;&nbsp;|&nbsp;<a href='https://www.thecocktaildb.com/' target="_blank">API</a>
             </div>
             </div>
+       
 
     </body>
 

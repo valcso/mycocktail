@@ -14,7 +14,7 @@ function search(a){
 }
 
 function myscript(){
-    console.log('ooo..');
+
 
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
@@ -38,4 +38,15 @@ function myscript(){
    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     request.setRequestHeader('X-CSRF-TOKEN', token);
    request.send(send);
+}
+
+function imgModal(c){
+    var m=document.getElementById('modal');
+    if(c == 2){
+        m.style.display='none';
+    }else{
+        m.style.display='block';
+    }
+
+
 }

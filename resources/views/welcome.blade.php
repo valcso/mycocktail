@@ -143,12 +143,13 @@
             </div>
             </div>
         </div>
-          
+      
+    
         </div>
         <div  class='col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12' id='footer'>
             <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6' id='footerInner'>
                 <a  style='color: #007bff;'href='https://github.com/valcso' target='_blank'><i class="fab fa-github-square"  style='font-size:25px;'></i></a>&nbsp;|&nbsp;&nbsp;&copy; <a id='copyRight'>All rights reserved</a>&nbsp;&nbsp;|&nbsp;<a style='color: #007bff;' href='https://www.thecocktaildb.com/' target="_blank">API</a>
             </div>
-        </div>
+        </div>  
     </body>
 </html>

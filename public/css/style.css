@@ -13,6 +13,7 @@ html,body{
 }
 #welcomeCol{
   padding: 25px;
+
  
 }
 #welcomeDivLeft,#welcomeDivRight{
@@ -25,6 +26,11 @@ html,body{
 }
 #ingr{
   color: #c5bfbf;
+}
+#loginContainer{
+  margin: 0 auto;
+  top: 20%;
+  position: absolute;
 }
 .wrapper{
 	height: 100%;
@@ -110,6 +116,8 @@ border: 0px solid #000000;
 }
 #navbarDropdown{
   color: #689ad0;
+  margin-left: 15px;
+  font-weight: bold;
 }
 #footerInner{
   margin: 0 auto;
@@ -194,7 +202,6 @@ color: #000;
 #itemBox{
     background-color: #fff;
     border-radius: .4rem;
-    cursor: pointer;
     transition: 0.2s;
     margin-top: 45px;
    }
@@ -237,8 +244,49 @@ color: #000;
 .fullImg{
     border-radius: 8px;
 }
-
-
+.fullImg:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+.modal{
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+.modal-content{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.close{
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
 .tags {
   list-style: none;
   margin: 0;
@@ -402,6 +450,9 @@ min-height: 45px;
     color: #000000;
     font-weight: 600;
   
+  }
+  .smallTitle{
+    padding: 13px;
   }
   #srch{
     font-size: 13px;

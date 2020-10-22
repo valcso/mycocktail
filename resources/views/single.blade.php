@@ -1,11 +1,15 @@
 @extends('inc.template')
 @section('content')
+<div class='modal' id='modal'>
+  <img class='modal-content' src='{{$image}}'>
+  <span class="close" onclick='imgModal(2)'>&times;</span>
+</div>
 <div class='row' style='padding:15px; margin-left: 0px;
 margin-right: 0px;'>
 <div class='col-xl-5 col-lg-5 col-md-5 col-sm-5' style='text-align:left;'>
 <div style='padding:2px;'> 
   <a  class='backBtn' href='{{ url()->previous() }}'>&larr; Go back</a><br></div>
-<img class='fullImg' src='{{$image}}' width="80%">
+<img class='fullImg' src='{{$image}}' width="80%" onclick="imgModal(this)">
 <ul class="tags">
 <li><a  class="tag">{{$category}}</a></li>
 <li><a class='tag'>{{$isAlcoholic}}</a></li>
@@ -48,7 +52,11 @@ echo "</div>";
 </div>
 
 </div>
+@endsection
+@section('comments')
+<div class='col-xl-12'>
 
+</div>
 @endsection
 
 
