@@ -24,14 +24,14 @@ function myscript(){
                 document.getElementById('searchResponse').style.display='block';
                 document.getElementById('searchResponse').innerHTML=request.response;
             }else{
-                document.getElementById('ldg').innerHTML='<img src="http://localhost:81/cocktailAPP/public/images/35.gif" id="loading">';
+                document.getElementById('ldg').innerHTML='<img src="http://127.0.0.1:81/cocktailAPP/public/images/35.gif" id="loading">';
                 document.getElementById('searchResponse').style.display='none';
             }
       
         }
     };
     var s=document.getElementById('srch').value;
-    var url="http://localhost:81/cocktailAPP/public/search";
+    var url="http://127.0.0.1:81/cocktailAPP/public/search";
     var send="string="+s;
     token = document.querySelector('meta[name="csrf-token"]').content;
    request.open("POST",url,true);
