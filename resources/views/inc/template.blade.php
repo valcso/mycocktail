@@ -66,19 +66,19 @@
                      
                         <li class="nav-item" id='navBox'>
                             <img src="images/drink-glass-with-soda-and-straw.svg" id='navIcons'>
-                            <a id='navItem' href='http://localhost:81/cocktailAPP/public/home'class="nav-link">Ordinary drink</a> 
+                            <a id='navItem' href='http://127.0.0.1:81/cocktailAPP/public/home'class="nav-link">Ordinary drink</a> 
                         </li>
                         <li class="nav-item" id='navBox'>
                             <img src="images/cola.svg" id='navIcons'>
-                            <a id='navItem' href='http://localhost:81/cocktailAPP/public/nonAlc' class="nav-link">Non alcoholic</a> 
+                            <a id='navItem' href='http://127.0.0.1:81/cocktailAPP/public/nonAlc' class="nav-link">Non alcoholic</a> 
                         </li>
                         <li class="nav-item" id='navBox'>
                             <img src="images/coconut-drink.svg" id='navIcons'>
-                            <a id='navItem' href='http://localhost:81/cocktailAPP/public/cocktail' class="nav-link">Cocktail</a> 
+                            <a id='navItem' href='http://127.0.0.1:81/cocktailAPP/public/cocktail' class="nav-link">Cocktail</a> 
                         </li>
                         <li class="nav-item" id='navBox'>
                             <img src="images/shot.svg" id='navIcons'>
-                            <a id='navItem'href='http://localhost:81/cocktailAPP/public/shot' class="nav-link">Shot</a> 
+                            <a id='navItem'href='http://127.0.0.1/cocktailAPP/public/shot' class="nav-link">Shot</a> 
                         </li>
                         <li class="nav-item" id='navBox'>
                             <img  src="images/searching.svg" id='navIcons' onclick='search(1)'>

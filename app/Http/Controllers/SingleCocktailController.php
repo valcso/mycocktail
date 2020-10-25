@@ -19,6 +19,10 @@ class SingleCocktailController extends Controller
         $instruction=[];
         $isAlcoholic="";
         $glass="";
+        $app_id='74a40d8c';
+        $app_key='64442055ebb14efc793fd9f1ceaceef9';
+        $ingredientCalorie=[];
+        $calories=[];
         $i=0;
         $category='';
         foreach($resp['drinks'][0] as $key=> $value){
@@ -34,6 +38,7 @@ class SingleCocktailController extends Controller
             if(Str::contains($key,['strIngredient'])){
                 if($value !== NULL){
                     $measure['ingredient'][$key]=$value;
+                    $ingredientCalorie[]=$value;
                 }
              }
              if(Str::contains($key,['strGlass'])){
@@ -63,12 +68,16 @@ class SingleCocktailController extends Controller
              }
              
         }
+        foreach($ingredientCalorie as $value){
+            $response = Http::get('https://api.edamam.com/api/food-database/v2/parser?ingr='.$value.'&app_id='.$app_id.'&app_key='.$app_key.'');
+            $calories[]=$response->json();
+        }
 
       // return view('cocktail.single')->with('data',$response->json());
        // return view('cocktail.single')->with('data',$ingredients);
 
 
-       return view('single',compact('name','measure','image','instruction','category','isAlcoholic','glass'));
+       return view('single',compact('name','measure','image','instruction','category','isAlcoholic','glass','calories'));
     }
 }
 ?>
