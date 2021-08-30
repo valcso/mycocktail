@@ -1,4 +1,3 @@
-
 <?php
 
 namespace App\Http\Controllers\Admin;
@@ -204,38 +203,39 @@ class ProductsController extends Controller
         $id = $product->updateProductDetails($request->all());
        
         $name=$request->input('name');
-       
-        $this->updateProductDescription($id,$name);
+       $this->updateProductDescription($name,$id,$type='description');
 
         \Flash::success(trans('admin.msg_success_updated'));
         return redirect()->to('admin/products/edit/' . $id);
     
     }
 
-    public function updateProductDescription ($id,$name)
+    public function updateProductDescription ($id,$proizvodjac,$dezen,$sezona,$dimenzija,$type)
 
     {
         $product = Products::where('id',$id)->get();
-        $sezona = $product[0]->ef_sezona;
+        if($type='parameters')
+        {
 
           
+          $short_description_proizvodjac=ucwords(strtolower($proizvodjac));
           $description = '';
-          
+          $short_description=$short_description_proizvodjac." ".$dezen;
           
           if($sezona == 'za sve sezone')
           {
-              $description = "Guma za sve sezone ".''.$name.''.' sa garancijom od 36 meseci, dostupna je uz besplatnu isporuku na adresu vašeg vulkanizera.';
+              $description = "Guma za sve sezone ".''.$proizvodjac.' '.$dezen.' u dimenziji '.$dimenzija.' sa garancijom od 36 meseci, dostupna je uz besplatnu isporuku na adresu vašeg vulkanizera.';
           }
           else 
           {
             $sezona = ucwords(strtolower($sezona));
-            $description =  $sezona.' guma '.$name.' sa garancijom od 36 meseci, dostupna je uz besplatnu isporuku na adresu vašeg vulkanizera.';
+            $description =  $sezona.' guma '.$proizvodjac.' '.$dezen.' u dimenziji '.$dimenzija.' sa garancijom od 36 meseci, dostupna je uz besplatnu isporuku na adresu vašeg vulkanizera.';
 
           }
-      
+        }
         
-        Products::where('id',$id)->update(['desc' => $description]);
-        
+        Products::where('id',$id)->update(['desc' => $description,'short_desc'=>$short_description]);
+    
     }
 
     /**
@@ -260,23 +260,13 @@ class ProductsController extends Controller
        $dimenzija = $request->input('ef_dimensions');
        $type='parameters';
        
-       $this->updateProductShortDesc($id,$proizvodjac,$dezen);
+       $this->updateProductDescription($id,$proizvodjac,$dezen,$sezona,$dimenzija,$type);
    
 
         \Flash::success(trans('admin.msg_success_updated'));
          return redirect()->to('admin/products/edit/' .$request->id.'/parameters');
     }
-     
-    public function updateProductShortDesc($id,$proizvodjac,$dezen)
-    
-    {
-        
-        $proizvodjac = ucwords(strtolower($proizvodjac)); 
-        $short_desc = $proizvodjac." ".$dezen;
-         
-        Products::where('id',$id)->update(['short_desc' => $short_desc]);
 
-    }
 
     /**
      * @param StoreProductRequest $request
